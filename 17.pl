@@ -1,9 +1,8 @@
 #!/usr/bin/perl
 use strict;
 use warnings;
-use Data::Dumper;
-my $number = shift;
 
+my $number = shift;
 my %words;
 
 # words for 1 to 20 are unique
