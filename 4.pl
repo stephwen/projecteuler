@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 use strict;
 use warnings;
-
+use List::Util qw(max);
 
 my $largest = 0;
 my $nbDigits = shift;
@@ -12,11 +12,10 @@ my $min = 10**($nbDigits - 1);
 for my $a ($min..$max) {
 	for my $b ($min..$max) {
 		if (isPalindrome($a*$b)) {
-			$largest = $a*$b;
+			$largest = max($a*$b, $largest);
 		}
 	}
 }
-
 
 print $largest;
 
