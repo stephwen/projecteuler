@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-my $number = shift;
+my $number = shift;	# 100 for project euler
 
 my $sumOfSquare = 0;
 my $squareOfSum = 0;

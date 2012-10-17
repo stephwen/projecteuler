@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-my $number = shift;
+my $number = shift;	# 600851475143 for project euler
 my $largestPrime = 0;
 
 for my $i (2..int(sqrt($number))) {

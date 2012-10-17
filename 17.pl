@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-my $number = shift;
+my $number = shift;	# 1000 for project euler	
 my %words;
 
 # words for 1 to 20 are unique
@@ -29,7 +29,7 @@ $words{18} = "eighteen";
 $words{19} = "nineteen";
 $words{20} = "twenty";
 $words{30} = "thirty";
-$words{40} = "fourty";
+$words{40} = "forty";
 $words{50} = "fifty";
 $words{60} = "sixty";
 $words{70} = "seventy";
@@ -56,12 +56,13 @@ for my $k (1..9) {
 	}
 }
 
-
 $words{1000} = "one thousand";
 
 my $nbLetters = 0;
 
 for my $i (1..$number) {
+	$words{$i} =~ s/\s+//g;
+	$words{$i} =~ s/-//g;
 	$nbLetters += length($words{$i});
 }
 

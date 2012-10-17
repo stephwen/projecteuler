@@ -6,7 +6,7 @@ my $fib1 = 1;
 my $fib2 = 2;
 my $sum = 2;
 
-my $limit = shift;
+my $limit = shift;	# 4000000 for project euler
 
 while ($fib1 <= $limit && $fib2 <= $limit) {
 	$fib1 += $fib2;

@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-my $number = shift;
+my $number = shift;	# 2000000 for project euler
 my $sum = 0;
 
 for my $i (2..$number-1) {

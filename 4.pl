@@ -4,7 +4,7 @@ use warnings;
 use List::Util qw(max);
 
 my $largest = 0;
-my $nbDigits = shift;
+my $nbDigits = shift;	# 3 for project euler
 
 my $max = (10**$nbDigits) - 1;
 my $min = 10**($nbDigits - 1);

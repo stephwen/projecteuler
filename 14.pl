@@ -3,7 +3,7 @@ use strict;
 use warnings;
 no warnings 'recursion';
 
-my $number = shift;
+my $number = shift;	# 1000000 for project euler
 
 my %chains;	# key: start, value: length
 my %longest = (

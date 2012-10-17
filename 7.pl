@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-my $number = shift;
+my $number = shift;	# 10001 for project euler
 my $i = 1;	# n-th prime number
 my $j = 2;	# prime number
 

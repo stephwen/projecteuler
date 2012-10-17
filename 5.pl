@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-my $number = shift;
+my $number = shift;	# 20 for project euler
 
 my $j = $number;
 my $i = 2;

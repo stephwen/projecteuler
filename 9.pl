@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-my $number = shift;
+my $number = shift;	# 1000 for project euler
 
 for my $i (1..($number/2)) {
 	for my $j (1..($number/2)) {
