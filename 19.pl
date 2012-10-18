@@ -9,22 +9,39 @@ my $weekDay = 1;
 
 my $nbSundays = 0;
 
-while ($year <= 2000) {
-	my $nbDaysInMonth = getNbDaysInMonth($year, $month, $day);
 
-	if ($day <= $nbDaysInMonth) {
-		print "$year/$month/$day: $weekDay\n";
-		$weekDay++;
-		if ($weekDay > 7) {$weekDay = $weekDay % 7; }
-		$day++;
-	} elsif ($month < 12) {
-		$month++; $day = 1;
-	} else {
-		$month = 1; $day = 1; $year++;
-	}
+
+while ($year < 2001) {
+	if ($day == 1 && $weekDay == 7 && $year > 1900) { $nbSundays++; }
+	($year, $month, $day, $weekDay) = getTommorow($year, $month, $day, $weekDay);
 }
 
 print $nbSundays;
+
+sub getTommorow {
+	my $year = shift;
+	my $month = shift,
+	my $day = shift;
+	my $weekDay = shift;
+
+	$weekDay++;
+        if ($weekDay > 7) {$weekDay = $weekDay % 7; }
+
+	my $nbDaysInMonth = getNbDaysInMonth($year, $month, $day);
+
+	if ($day < $nbDaysInMonth) {
+		$day++;
+	} else {
+		$day = 1; $month++;
+	}
+	if ($month > 12) {
+		$month = 1; $year++;
+	}
+
+	return($year, $month, $day, $weekDay);
+}
+
+
 
 sub isLeapYear {
 	if ($year % 400 == 0) { return 1; }

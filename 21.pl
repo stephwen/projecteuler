@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use List::Util qw(sum);
 
-my $number = shift;
+my $number = shift;	# 10000 for project euler
 my %sumDivs;
 my $sum = 0;
 

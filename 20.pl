@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use Math::BigInt;
 
-my $number = shift;
+my $number = shift;	# 100 for project euler
 my $base = Math::BigInt->new($number);
 my $fac = $base->bfac();
 my @digits = split(//, $fac);
