@@ -2,7 +2,6 @@
 use strict;
 use warnings;
 use List::Util qw(sum);
-use Data::Dumper;
 
 my $upperLimit = 28123;
 my %abundants;
